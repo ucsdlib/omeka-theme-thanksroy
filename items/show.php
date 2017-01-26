@@ -7,8 +7,6 @@
     <?php endif; ?>
 
 
-<?php echo all_element_texts('item'); ?>
-
 <!-- The following returns all of the files associated with an item. -->
 <?php if (metadata('item', 'has files') && (get_theme_option('Item FileGallery') == 1)): ?>
 <div id="itemfiles" class="element">
@@ -16,6 +14,8 @@
     <div class="element-text"><?php echo item_image_gallery(); ?></div>
 </div>
 <?php endif; ?>
+
+<?php echo all_element_texts('item'); ?>
 
 <!-- If the item belongs to a collection, the following creates a link to that collection. -->
 <?php if (metadata('item', 'Collection Name')): ?>
